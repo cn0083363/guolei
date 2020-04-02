@@ -7,16 +7,23 @@
     <meta http-equiv="Content-Type" content="content=text/html;charset=UTF-8">
     <link href="css/css.css" rel="stylesheet">
     <style type="text/css">
-      <!--
-      .style4	{
-      font-size: 12px;
-      color: #FFFFFF;
-      }
-      -->
+     #div1{
+				
+				width: 744;
+				height: 300;
+				position: relative;
+			}
+			
+			#btn{
+				position: absolute;
+				right: 5px;
+				bottom: 5px;
+			}
     </style>
   </head>
   <body >
 <SCRIPT language="javascript" src="js/common.js"></SCRIPT>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <div align="left" id="screen" class="div_screen">
       <table border="0" width="100%" cellspacing="0" cellpadding="0">
         <TR>
@@ -139,8 +146,12 @@
 							
 		<table width="100%"  cellspacing="1" > 
 						<tr> 
-							<td class="txt_normal">50件中1－10件を表示</td>
-							<td align="right" class="txt_normal">&nbsp;&nbsp;最初｜<a href="#">前</a>｜<a href="#">次</a>｜<a href="#">最後&nbsp;</a></td> 
+							<td class="txt_normal">${page.total }件中${page.startRow }－${page.endRow }件表示</td>
+							<td align="right" class="txt_normal">&nbsp;&nbsp;
+							<a class="first" href="${pageContext.request.contextPath }/pageFun?pagenum=1">最初</a>｜
+							<a class="first" href="${pageContext.request.contextPath }/pageFun?pagenum=${page.prePage}">前</a>｜
+							<a class="last" href="${pageContext.request.contextPath }/pageFun?pagenum=${page.nextPage}">次</a>｜
+							<a class="last" href="${pageContext.request.contextPath }/pageFun?pagenum=${page.pages}">最後</a>&nbsp;</td> 
 						</tr> 
 					</table>
 		 <div class="div_workarea_searchdetail">		 
@@ -162,43 +173,41 @@
 										  </tr>
 									 	</table>
 								</td></tr>
-								<tr ><td>	
-										<table border="0" cellspacing="1" cellpadding="1" >	
-										  <tr class="trOdd"  >
-											<td align="center" class="txt_table_head" width="100">
-											<spanclass="txt_normal" >
-											
-											<input name="radiobutton" type="radio" value="radiobutton" checked >
-													
+								<tr ><td><form id="form1" name="form1" method="post" action="${pageContext.request.contextPath }/empupdateByeid">	
+						 		
+						          <table id="info" border="0" cellpadding="1" cellspacing="1">
+							      <c:forEach items="${page.list }" var="fun" varStatus="vs">
+							      <tr class="${vs.count%2==1? 'trOdd':'trEven' }">
+                                  <td nowrap width="100" align="center" ><input name="eid" type="radio" value="${fun.eid }">
+                                  <input type="hidden" value="${emp.managerEid} " disabled="disabled"></td>
 											<td nowrap width="250" align="center"  >
 											  <span class="txt_normal">
-												DDC2008010101
+												${fun.eid }
 											  </span>
 											</td>
 									
 											<td nowrap width="400" align="center">
 											  <span class="txt_normal">
-												プロジェクト名
+												${fun.namejpn }
 											  </span>
 											</td>
-											
-</table>
+											</c:forEach>											
+                                         </table>
 								</td> </tr>
                    </table>					 
                      </div>
+                     
+                    
 						<table width="100%" cellspacing="1">
 							
-                        <div class="div_WorkButton" >
-					 
-						<tr>
-						  <td width="100%" colspan="8" align=    >
-						  
-						<input type="button" class="inp_Button" value=" プロジェクト確認 " onClick="location.href='./assignProjectConfirm.htm';">
-						  </td>
-						  
-						</tr>
+                        <div id="div1"  >
+					    
+					    <button id="btn">プロジェクト確認</button>
+						
+						
+					
 					  
-					</div>
+					    </div>
 						</table>
 						
 								</td>
@@ -244,5 +253,30 @@
 	</TR>
 </table>
 </div>
+<script type="text/javascript">
 
+$("#update").click(function(){
+	$("#form1").submit();
+});
+
+
+	$(".first").each(function(){
+		var first = ${page.isFirstPage};
+		console.log(first);
+		if(first){
+			$(this).removeAttr("href");
+		}
+	});
+
+	$(".last").each(function(){
+		var last = ${page.isLastPage};
+		if(last){
+			$(this).removeAttr("href");
+		}
+	});
+	
+	
+	
+
+</script>
 </html>
