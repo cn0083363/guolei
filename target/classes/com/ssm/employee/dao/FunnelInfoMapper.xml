@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.ssm.employee.dao.FunnelInfoMapper">
+<resultMap type="FunnelInfo" id="FunnelMap" autoMapping="true">
+<result column="DDC_NO" property="eid"/>
+<result column="PROJECT_NAME_JPN" property="namejpn"/>
+
+</resultMap>
+<update id="updateEmp" parameterType="employeeInfo">
+		update employee_info 
+		<set>
+			<if test="mailAddress !=null and mailAddress != ''">
+				MAIL_ADDRESS = #{mailAddress},
+			</if>
+			<if test="nameCn !=null and nameCn !=''">
+			   NAME_CN = #{nameCn},
+			</if>
+			<if test="name !=null and name!=''">
+				NAME = #{name},
+			</if>
+			<if test="nameKanji != null">
+				NAME_KANJI = #{nameKanji},
+			</if>
+			<if test="birthday !=null and birthday != ''">
+				BIRTHDAY = #{birthday},
+			</if>
+			<if test="birthday == ''">
+				BIRTHDAY = NULL,
+			</if>
+			<if test="location.code != null">
+				LOCATION_CODE = #{location.code},
+			</if>
+			<if test="site.code !=null and site.code != ''">
+				SITE_CODE = #{site.code},
+			</if>
+			<if test="gender!=null">
+			    gender = #{gender},
+			</if>
+		</set>
+		where eid = #{eid}
+	</update>
+<select id="findFuns" resultMap="FunnelMap" >
+SELECT `DDC_NO`,`PROJECT_NAME_JPN`
+FROM `funnel_info`
+
+
+</select>
+</mapper>
