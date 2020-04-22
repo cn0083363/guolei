@@ -1,6 +1,12 @@
 package com.ssm.employee.pojo;
 
-public class FunnelInfo {
+import java.io.Serializable;
+
+public class FunnelInfo implements Serializable {
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 private String eid;
 private String name;
 private String kbn;

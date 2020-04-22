@@ -35,7 +35,7 @@ public class FunnelInfoServicelmpl implements FunnelInfoService {
 	@Override
 	public FunnelInfo findEmpByEid(String eid) {
 		// TODO Auto-generated method stub
-		return funnelInfoMapper.findEmpByEid(eid);
+		return funnelInfoMapper.findEmpByEid(eid) ;
 	}
 
 	@Override

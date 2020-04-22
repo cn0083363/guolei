@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class EmployeRegisterController {
 	
-	@RequestMapping("/empRegister")
+	@RequestMapping("/employeeUpate")
 	public String toRegister() {
-		return "employeRegister";
+		return "employeeUpate";
 	}
 }

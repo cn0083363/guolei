@@ -86,8 +86,8 @@
                   <td width="2" rowspan="12" bgcolor="#808080" >
                     &nbsp;</td>
                   <td width="205" >
-                    <table 	border="0" cellspacing="0" cellpadding="0" width="100%" >
-                     <tr> 
+                  <table 	border="0" cellspacing="0" cellpadding="0" width="100%" > 
+                                                		 <tr> 
                                                 			<td width="205" height="30"><span class="menuBranch">&#8226;员工信息管理</span></td> 
 			                                            </tr> 
 			                                            <tr> 
@@ -117,18 +117,49 @@
 			                                                <td height="30"><span class="menuItem">　　<a href="${pageContext.request.contextPath }/employeeProjectFunnelList" target="_self">プロジェクト情報登録</a></span></td> 
 			                                            </tr> 
 			                                            <tr> 
-			                                                <td height="30"><span class="menuItem">　　<a href="TUPQuery.htm" target="_self">プロジェクト情報照会</a></span></td> 
+			                                                <td height="30"><span class="menuItem">　　<a href="${pageContext.request.contextPath }/ProjectQuery" target="_self">プロジェクト情報照会</a></span></td> 
 			                                            </tr>  
 			                                            <tr> 
 			                                                <td height="30"><span class="menuItem">　　<a href="TUPConfirm.htm" target="_self">プロジェクト情報承認</a></span></td> 
 			                                            </tr>  														
-<tr> 
+
 			                                                <td height="30"><span class="menuItem">　　<a href="TUPConfirm.htm" target="_self">プロジェクト情報更新</a></span></td> 
 			                                            </tr> 
 														<tr> 
 			                                                <td height="30"><span class="menuItem">　　<a href="TUPConfirm.htm" target="_self">PD/PMアセイン情報更新</a></span></td> 
 			                                            </tr> 
-                    </table></td>
+			                                            <tr> 
+			                                                <td height="30"><span class="menuBranch">&#8226;稼動管理</span></td> 
+			                                            </tr> 
+			                                            <tr> 
+			                                                <td height="30"><span class="menuItem">　　<a href="${pageContext.request.contextPath}/ResourceConfirmInfoQuery" target="_self">リソース情報承認</a></span></td> 
+			                                            </tr> 	
+			                                            <tr> 
+			                                                <td height="30"><span class="menuItem">　　<a href="${pageContext.request.contextPath}/assignResourceQuery" target="_self">リソース情報検索</a></span></td> 
+			                                            </tr> 
+			                                            <tr> 
+			                                                <td height="30"><span class="menuItem">　　<a href="${pageContext.request.contextPath}/assignResourceUsedQuery" target="_self">リソース稼働情報検索</a></span></td> 
+			                                            </tr> 		                                           
+			                                             <tr> 
+			                                                <td height="30"><span class="menuBranch">&#8226;システム管理</span></td> 
+			                                            </tr> 
+						                                      <tr> 
+						                                          <td height="30"><span class="menuItem">　　<a href="employeRoleAssign1.htm" target="_self">社員ロールアサイン</a></span></td> 
+						                                      </tr> 
+						                                      <tr> 
+						                                          <td height="30"><span class="menuItem">　　<a href="roleResourceList.htm" target="_self">ロール機能権限アサイン</a></span></td> 
+						                                      </tr> 
+						                                      <tr> 
+						                                          <td height="30"><span class="menuItem">　　<a href="passwordChange.htm" target="_self">パースワード変更</a></span></td> 
+						                                      </tr>
+						                                      <tr> 
+						                                          <td height="30"><span class="menuItem">　　<a href="#" target="_self">マスタメンテナンス</a></span></td> 
+						                                      </tr>
+																									<tr> 
+			                                                <td>&nbsp;</td> 
+			                                            </tr>
+                                                	</table>	
+                  </td>
                   <td width="1" rowspan="12" bgcolor="#808080"></td>
                 </tr>
               </table>
@@ -173,7 +204,8 @@
 										  </tr>
 									 	</table>
 								</td></tr>
-								<tr ><td><form id="form1" name="form1" method="post" action="${pageContext.request.contextPath }/empupdateByeid">	
+								<tr ><td>
+								<form id="form1" name="form1" method="post" action="${pageContext.request.contextPath }/ProjectRegister">	
 						 		
 						          <table id="info" border="0" cellpadding="1" cellspacing="1">
 							      <c:forEach items="${page.list }" var="fun" varStatus="vs">
@@ -202,8 +234,11 @@
 							
                         <div id="div1"  >
 					    
-					    <button id="btn">プロジェクト確認</button>
+					    
 						
+                        <span style="position:absolute; right:0px; bottom:0px;">
+                        <input name="Button" type="submit" value="プロジェクト確認" ></span>
+                        
 						
 					
 					  
@@ -224,8 +259,8 @@
 											</tr>
 											<tr>
 												<td width=25%></td>
-												<td width=25% align=center>&nbsp;</td>
-												<td width=25% align=center>&nbsp;</td>
+												<td width=25% align=center><input type="submit" id ="B1" value="    承　認    " class="string"/></td>
+												
 												<td width=25%></td>
 											</tr>
 										</table>

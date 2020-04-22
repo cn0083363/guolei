@@ -48,4 +48,11 @@ FROM `funnel_info`
 
 
 </select>
+<select id="findEmpByEid" resultMap="FunnelMap" >
+SELECT e.DDC_NO,`PROJECT_NAME_JPN`
+FROM funnel_info e
+where e.DDC_NO = #{eid}
+
+
+</select>
 </mapper>
