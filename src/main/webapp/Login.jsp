@@ -47,7 +47,7 @@
 									</tr> 
 									<tr> 
 										<td	width=30%>&nbsp;</td> 
-										<td> <p	class="titleCenter"> <font face="Times New Roman"> <b>用户登录</b></font></p></td>	
+										<td> <p	class="titleCenter"> <font face="Times New Roman"> <b>ユーザ認証</b></font></p></td>	
 									</tr> 
 								</table>
 							</td> 

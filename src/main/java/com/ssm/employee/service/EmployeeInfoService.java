@@ -9,6 +9,6 @@ import com.ssm.employee.pojo.EmployeeInfo;
 
 public interface EmployeeInfoService {
 	public PageInfo<EmployeeInfo> findEmps(Map<String, Object> map,int pageNo);
-	public  EmployeeInfo findEmpByEid(String eid);
+	public EmployeeInfo findEmpByEid(String eid);
 	public int updateEmp(EmployeeInfo emp);
 }

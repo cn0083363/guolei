@@ -1,12 +1,18 @@
 package com.ssm.employee.pojo;
 
+import java.util.List;
+
 public class JobInfo {
 	private String eid;
+	//private String jobTitleCode;
 	private Master title;
 	private String jobLevelCode;
+	//private String deliveryCapabilityCode;
 	private Master capability;
+	//private String jobPositionCode;
 	private Master position;
-	private Master confirm; 
+	//private String confirmStatus;
+	private Master confirm;
 	private String rejectReason;
 	private String insUserid;
 	private String insTimestamp;
@@ -112,6 +118,10 @@ public class JobInfo {
 				+ ", insUserid=" + insUserid + ", insTimestamp=" + insTimestamp + ", updUserid=" + updUserid
 				+ ", updTimestamp=" + updTimestamp + "]";
 	}
+
+
+
+	
 
 	
 	

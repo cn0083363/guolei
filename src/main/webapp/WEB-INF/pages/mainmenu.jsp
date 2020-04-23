@@ -34,7 +34,7 @@
                                         </tr> 
                                         <tr> 
                                           <td	width=40%>&nbsp;</td> 
-                                            <td> <p class="titleCenter"> <font face="Times New Roman"> <b>Menu</b></font></p></td> 
+                                            <td> <p class="titleCenter"> <font face="Times New Roman"> <b>メニュー</b></font></p></td> 
                                         </tr> 
                                     </table></td> 
                             </tr> 
@@ -47,7 +47,7 @@
                             </tr> 
                         </table> 
                         <HR> 
-                        <table border="0" cellspacing="0" cellpadding="0" width="100%" > 
+                       <table border="0" cellspacing="0" cellpadding="0" width="100%" > 
                             <tr> 
                                 <td valign="top" > <div align="center" class="div_naviarea" id="navi" > 
                                         <!-- navigator area start here --> 
@@ -56,30 +56,19 @@
                                                 <td width="2" rowspan="12" bgcolor="#808080" >&nbsp;</td> 
                                                 <td width="205" >
                                                 	<table 	border="0" cellspacing="0" cellpadding="0" width="100%" > 
-                                                		 <tr> 
-                                                			<td width="205" height="30"><span class="menuBranch">&#8226;员工信息管理</span></td> 
+                                                		                                                         <tr> 
+                                                			<td width="205" height="30"><span class="menuBranch">&#8226;社員管理</span></td> 
 			                                            </tr> 
 			                                            <tr> 
-			                                                <td height="30"><span class="menuItem">　　<a href="${pageContext.request.contextPath }/employeeUpate" target="_self">员工信息登录</a></span></td> 
+			                                                <td height="30"><span class="menuItem">　　<a href="./employeRegister00.htm" target="_self">社員情報登録</a></span></td> 
 			                                            </tr> 
 			                                            <tr> 
-			                                                <td height="30"><span class="menuItem">　　<a href="${pageContext.request.contextPath }/employeQuery" target="_self">员工信息检索</a></span></td> 
+			                                                <td height="30"><span class="menuItem">　　<a href="./employeQuery.htm" target="_self">社員情報検索</a></span></td> 
 			                                            </tr> 
 			                                             <tr> 
-			                                                <td height="30"><span class="menuItem">　　<a href="confirmInfoQuery.htm" target="_self">员工信息审批</a></span></td> 
+			                                                <td height="30"><span class="menuItem">　　<a href="./confirmInfoQuery.htm" target="_self">社員情報承認</a></span></td> 
 			                                            </tr> 
-			                                            <tr> 
-			                                                <td height="30"><span class="menuBranch">&#8226;员工期权管理</span></td> 
-			                                            </tr> 
-			                                            <tr> 
-			                                                <td height="30"><span class="menuItem">　　<a href="TUPPurchase.htm" target="_self">员工期权申请</a></span></td> 
-			                                            </tr> 
-			                                            <tr> 
-			                                                <td height="30"><span class="menuItem">　　<a href="TUPQuery.htm" target="_self">员工期权一览</a></span></td> 
-			                                            </tr>  
-			                                            <tr> 
-			                                                <td height="30"><span class="menuItem">　　<a href="TUPConfirm.htm" target="_self">员工期权审批</a></span></td> 
-			                                            </tr>  			                                           
+														</tr>  			                                           
                                                              <td height="30"><span class="menuBranch">&#8226;プロジェクト管理</span></td> 
 			                                            </tr> 
 			                                            <tr> 
@@ -121,9 +110,6 @@
 						                                      <tr> 
 						                                          <td height="30"><span class="menuItem">　　<a href="passwordChange.htm" target="_self">パースワード変更</a></span></td> 
 						                                      </tr>
-						                                      <tr> 
-						                                          <td height="30"><span class="menuItem">　　<a href="#" target="_self">マスタメンテナンス</a></span></td> 
-						                                      </tr>
 																									<tr> 
 			                                                <td>&nbsp;</td> 
 			                                            </tr>
@@ -144,7 +130,7 @@
                                             </tr> 
                                             <tr> 
                                                 <td width="22%" height="120">&nbsp;</td> 
-                                                <td width="51%"><div align="center"><span class="style13">Welcome！</span></div></td> 
+                                                <td width="51%"><div align="center"><span class="style13">よこっそ！</span></div></td> 
                                                 <td width="27%">&nbsp;</td> 
                                             </tr> 
                                             <tr> 

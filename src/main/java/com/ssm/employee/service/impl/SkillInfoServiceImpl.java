@@ -26,5 +26,19 @@ public class SkillInfoServiceImpl implements SkillInfoService {
 		return skillInfoMapper.getSkills();
 	}
 
+
+	@Override
+	public List<SkillInfo> getSkillsByEid(String eid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public void updateOrInsetSkill(List<SkillInfo> list) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
 
