@@ -324,7 +324,7 @@
 										</tr>
 										<tr>
 						  					<td colspan="4" align="center"><br>
-						  						<input id="back" type="button" value="　戻　る　" name="Back" class="string" >
+						  						<input type="button" id ="B3" value="    戻　る     " class="string" onClick="openWindow('employeeProjectFunnelList.htm')"/></td>
 						  					</td>
                       					</tr>                      
 									</table>
